@@ -21,11 +21,11 @@ for line in file:
 propane = master_list[71]
 n_butane = master_list[73]
 methanol = master_list[74]
-# ethylene_oxide = 
-# n_pentane = 
-# ethanol = 
-# acetone = 
-# isopropyl_alcohol = 
+ethylene_oxide = master_list[75]
+n_pentane = master_list[76]
+ethanol = master_list[77]
+acetone = master_list[78]
+isopropyl_alcohol = master_list[79]
 # acetonitrile = 
 # methylene_chloride = 
 # n_hexane = 
@@ -40,3 +40,15 @@ methanol = master_list[74]
 # o_xylene = 
 
 print(propane)
+
+chemicals = {
+	'propane' : propane[3]
+}
+
+#create dictionary
+#key : value
+#chemical : concentration
+
+print(chemicals)
+
+#go through chemicals and subtract from blank values
