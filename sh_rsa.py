@@ -6,49 +6,75 @@
 # IN which the file has the averages of several blanks
 #create new file
 
-file = open("test_csv.csv")
+#open the customer file and save variables
+def create_list(filename):
+	file = open(filename)
 
-master_list = []
-for line in file:
-	line = line.rstrip('\n').split(',')
-	#print(line)
-	master_list.append(line)
+	master_list = []
+	for line in file:
+		line = line.rstrip('\n').split(',')
+		#print(line)
+		master_list.append(line)
 
-#print(master_list)
+	#print(master_list)
 
 
+	propane = master_list[71]
+	n_butane = master_list[72]
+	methanol = master_list[73]
+	ethylene_oxide = master_list[74]
+	n_pentane = master_list[75]
+	ethanol = master_list[76]
+	acetone = master_list[77]
+	isopropyl_alcohol = master_list[78]
+	acetonitrile = master_list[79]
+	methylene_chloride = master_list[80]
+	n_hexane = master_list[82]
+	ethyl_acetate = master_list[83]
+	benzene = master_list[84]
+	dichloroethane = master_list[85] #problematic
+	heptane = master_list[86]
+	trichloroethylene = master_list[87]
+	toluene = master_list[88]
+	chloroform = master_list[89]
+	mp_xylene = master_list[90] #problematic
+	o_xylene = master_list[91]
 
-propane = master_list[71]
-n_butane = master_list[73]
-methanol = master_list[74]
-ethylene_oxide = master_list[75]
-n_pentane = master_list[76]
-ethanol = master_list[77]
-acetone = master_list[78]
-isopropyl_alcohol = master_list[79]
-# acetonitrile = 
-# methylene_chloride = 
-# n_hexane = 
-# ethyl_acetate = 
-# benzene = 
-# dichloroethane = #problematic
-# heptane = 
-# trichloroethylene = 
-# toluene = 
-# chloroform = 
-# mp_xylene = #problematic
-# o_xylene = 
+	#print(propane)
 
-print(propane)
+	chemicals = {
+		'propane' : propane[11],
+		'n-butane' : n_butane[11],
+		'methanol' : methanol[11],
+		'ethylene oxide' : ethylene_oxide[11],
+		'n-pentane' : n_pentane[11],
+		'ethanol' : ethanol[11],
+		'acetone' : acetone[11],
+		'isopropyl_alcohol' : isopropyl_alcohol[11],
+		'acetonitrile' : acetonitrile[11],
+		'methylene_chloride' : methylene_chloride[11],
+		
 
-chemicals = {
-	'propane' : propane[3]
-}
 
-#create dictionary
-#key : value
-#chemical : concentration
+	}	
 
-print(chemicals)
 
-#go through chemicals and subtract from blank values
+	for analyte in chemicals:
+		print(chemicals[analyte])
+
+		# if chemicals[analyte] == '':
+		# 	chemicals[analyte] == '0'
+
+
+	#create dictionary
+	#key : value
+	#chemical : concentration
+
+	print(chemicals)
+
+	#create blank file variables
+
+	#go through chemicals and subtract from blank values
+
+create_list("test_csv.csv")
+#create_list("data_file.txt")
