@@ -12,7 +12,7 @@ def create_list(filename):
 
 	master_list = []
 	for line in file:
-		line = line.rstrip('\n').split(',')
+		line = line.rstrip('\n').split('\t')
 		#print(line)
 		master_list.append(line)
 
@@ -43,9 +43,9 @@ def create_list(filename):
 	#print(propane)
 
 	chemicals = {
-		'propane' : propane[11],
-		'n-butane' : n_butane[11],
-		'methanol' : methanol[11],
+		propane[1] : propane[11],
+		n_butane[1] : n_butane[11],
+		methanol[1] : methanol[11],
 		'ethylene oxide' : ethylene_oxide[11],
 		'n-pentane' : n_pentane[11],
 		'ethanol' : ethanol[11],
@@ -53,14 +53,14 @@ def create_list(filename):
 		'isopropyl_alcohol' : isopropyl_alcohol[11],
 		'acetonitrile' : acetonitrile[11],
 		'methylene_chloride' : methylene_chloride[11],
-		
 
 
-	}	
+
+	}
 
 
-	for analyte in chemicals:
-		print(chemicals[analyte])
+	#for analyte in chemicals:
+		#print(chemicals[analyte])
 
 		# if chemicals[analyte] == '':
 		# 	chemicals[analyte] == '0'
@@ -70,11 +70,45 @@ def create_list(filename):
 	#key : value
 	#chemical : concentration
 
-	print(chemicals)
+	return(chemicals)
 
 	#create blank file variables
 
 	#go through chemicals and subtract from blank values
 
-create_list("test_csv.csv")
-#create_list("data_file.txt")
+
+customer_sample = create_list("data_file.txt")
+#print(customer_sample)
+
+method_blank = create_list("blank_1.txt")
+#print(method_blank)
+
+subtracted_values = {}
+
+for item in customer_sample:
+	if customer_sample[item] == '' or method_blank[item] == '':
+		continue
+	subtracted_values[item] = float(customer_sample[item]) - float(method_blank[item])
+
+#print(subtracted_values)
+
+
+def create_txt_file(subtracted_values, filename):
+	file = open(filename)
+
+	final_list = []
+	for line in file:
+		line = line.rstrip('\n').split('\t')
+		if len(line) > 11 and line[1] in subtracted_values:
+			#we have a concentration we want to overwrite
+			line[11] = str(subtracted_values[line[1]])
+
+		final_list.append(line)
+
+	#print(final_list)
+
+
+	for line in final_list:
+		print(('\t').join(line))
+
+create_txt_file(subtracted_values, "data_file.txt")
