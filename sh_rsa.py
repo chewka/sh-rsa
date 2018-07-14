@@ -46,16 +46,23 @@ def create_list(filename):
 		propane[1] : propane[11],
 		n_butane[1] : n_butane[11],
 		methanol[1] : methanol[11],
-		'ethylene oxide' : ethylene_oxide[11],
-		'n-pentane' : n_pentane[11],
-		'ethanol' : ethanol[11],
-		'acetone' : acetone[11],
-		'isopropyl_alcohol' : isopropyl_alcohol[11],
-		'acetonitrile' : acetonitrile[11],
-		'methylene_chloride' : methylene_chloride[11],
-
-
-
+		ethylene_oxide[1] : ethylene_oxide[11],
+		n_pentane[1] : n_pentane[11],
+		ethanol[1] : ethanol[11],
+		acetone[1] : acetone[11],
+		isopropyl_alcohol[1] : isopropyl_alcohol[11],
+		acetonitrile[1] : acetonitrile[11],
+		methylene_chloride[1] : methylene_chloride[11],
+		n_hexane[1] : n_hexane[11],
+		ethyl_acetate[1] : ethyl_acetate[11],
+		benzene[1] : benzene[11],
+		dichloroethane[1] : dichloroethane[11],
+		heptane[1] : heptane[11],
+		trichloroethylene[1] : trichloroethylene[11],
+		toluene[1] : toluene[11],
+		chloroform[1] : chloroform[11],
+		mp_xylene[1] : mp_xylene[11],
+		o_xylene[1] : o_xylene[11]
 	}
 
 
