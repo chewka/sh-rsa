@@ -6,7 +6,8 @@ from sys import argv
 # OR other file is simply all values stored
 # IN which the file has the averages of several blanks
 #create new file
-#python3 sh_rsa.py data_file.txt blank_1.txt test_output1.txt
+
+#python3 sh_rsa.py data_file.txt blank_file.txt > test_output2.txt
 
 #open the customer file and save variables
 def create_list(filename):
@@ -122,6 +123,5 @@ def create_txt_file(subtracted_values, filename):
 	for line in final_list:
 		print(('\t').join(line))
 
-new_file = argv[3]
 
-create_txt_file(subtracted_values, new_file)
+create_txt_file(subtracted_values, data_file)
