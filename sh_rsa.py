@@ -1,3 +1,4 @@
+from sys import argv
 #open a directory
 #open each file
 #subtract the values from another file
@@ -5,6 +6,7 @@
 # OR other file is simply all values stored
 # IN which the file has the averages of several blanks
 #create new file
+#python3 sh_rsa.py data_file.txt blank_1.txt test_output1.txt
 
 #open the customer file and save variables
 def create_list(filename):
@@ -83,12 +85,14 @@ def create_list(filename):
 
 	#go through chemicals and subtract from blank values
 
+data_file = argv[1]
+blank_text = argv[2]
 
-customer_sample = create_list("data_file.txt")
-#print(customer_sample)
+customer_sample = create_list(data_file)
+print(customer_sample)
 
-method_blank = create_list("blank_1.txt")
-#print(method_blank)
+method_blank = create_list(blank_text)
+print(method_blank)
 
 subtracted_values = {}
 
@@ -118,4 +122,6 @@ def create_txt_file(subtracted_values, filename):
 	for line in final_list:
 		print(('\t').join(line))
 
-create_txt_file(subtracted_values, "data_file.txt")
+new_file = argv[3]
+
+create_txt_file(subtracted_values, new_file)
