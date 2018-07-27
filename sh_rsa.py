@@ -90,10 +90,10 @@ data_file = argv[1]
 blank_text = argv[2]
 
 customer_sample = create_list(data_file)
-print(customer_sample)
+#print(customer_sample)
 
 method_blank = create_list(blank_text)
-print(method_blank)
+#print(method_blank)
 
 subtracted_values = {}
 
