@@ -90,29 +90,31 @@ def create_list(filename):
 
 num_files = argv[1]
 blank_first = argv[2]
+blank_2 = argv[3]
 
-for i < num_files:
-  blank_2 = argv[3]
-  blank_3 = argv[4]
-  blank_4 = argv[5]
+#for i < num_files:
+#  blank_3 = argv[4]
+#  blank_4 = argv[5]
 
-customer_sample = create_list(data_file)
+blank_list = create_list(blank_first)
 #print(customer_sample)
 
-method_blank = create_list(blank_text)
+blank_next = create_list(blank_2)
 #print(method_blank)
 
-subtracted_values = {}
+highest_values = {}
 
 
-for item in customer_sample:
-	if blank_first[item] > blank_next[item]:
+for item in blank_list:
+	if blank_list[item] > blank_next[item]:
 		highest_values[item] = blank_first[item]
+	else:
+		highest_values[item] = 
 
 print(highest_values)
 
 
-def create_txt_file(subtracted_values, filename):
+def create_txt_file(highest_values, filename):
 	file = open(filename)
 
 	final_list = []
@@ -131,4 +133,4 @@ def create_txt_file(subtracted_values, filename):
 		print(('\t').join(line))
 
 
-create_txt_file(subtracted_values, data_file)
+create_txt_file(highest_values, blank_first)
