@@ -109,7 +109,7 @@ for item in blank_list:
 	if blank_list[item] > blank_next[item]:
 		highest_values[item] = blank_first[item]
 	else:
-		highest_values[item] = 
+		highest_values[item] = blank_next[item]
 
 print(highest_values)
 
