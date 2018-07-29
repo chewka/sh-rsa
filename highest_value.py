@@ -104,12 +104,12 @@ blank_next = create_list(blank_2)
 
 highest_values = {}
 
-
-for item in blank_list:
-	if blank_list[item] > blank_next[item]:
-		highest_values[item] = blank_first[item]
-	else:
-		highest_values[item] = blank_next[item]
+for key in blank_list.keys():
+	if key in blank_next.keys():
+		if blank_list[key] > blank_next[key]:
+			highest_values[key] = blank_list[key]
+		else:
+			highest_values[key] = blank_next[key]
 
 print(highest_values)
 
