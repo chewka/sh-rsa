@@ -88,9 +88,9 @@ def create_list(filename):
 
 #get argvs
 
-num_files = argv[1]
-blank_first = argv[2]
-blank_2 = argv[3]
+#num_files = argv[1]
+blank_first = argv[1]
+blank_2 = argv[2]
 
 
 blank_list = create_list(blank_first)
@@ -112,12 +112,12 @@ def compare(blank_list, blank_next):
 	print(highest_values)
 	
 	
-if argv[4]:
-	blank_3 = argv[4]
+if argv[3]:
+	blank_3 = argv[3]
 	compare(highest_values, blank_3)
 
-if argv[5]:
-	blank_4 = argv[5]
+if argv[4]:
+	blank_4 = argv[4]
 	compare(highest_values, blank_4)
 
 
