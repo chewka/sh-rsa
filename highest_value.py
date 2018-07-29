@@ -92,9 +92,6 @@ num_files = argv[1]
 blank_first = argv[2]
 blank_2 = argv[3]
 
-#for i < num_files:
-#  blank_3 = argv[4]
-#  blank_4 = argv[5]
 
 blank_list = create_list(blank_first)
 #print(customer_sample)
@@ -104,14 +101,24 @@ blank_next = create_list(blank_2)
 
 highest_values = {}
 
-for key in blank_list.keys():
-	if key in blank_next.keys():
-		if blank_list[key] > blank_next[key]:
-			highest_values[key] = blank_list[key]
-		else:
-			highest_values[key] = blank_next[key]
+def compare(blank_list, blank_next):
+	for key in blank_list.keys():
+		if key in blank_next.keys():
+			if blank_list[key] > blank_next[key]:
+				highest_values[key] = blank_list[key]
+			else:
+				highest_values[key] = blank_next[key]
 
-print(highest_values)
+	print(highest_values)
+	
+	
+if argv[4]:
+	blank_3 = argv[4]
+	compare(highest_values, blank_3)
+
+if argv[5]:
+	blank_4 = argv[5]
+	compare(highest_values, blank_4)
 
 
 def create_txt_file(highest_values, filename):
