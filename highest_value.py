@@ -127,9 +127,9 @@ def create_txt_file(highest_values, filename):
 	final_list = []
 	for line in file:
 		line = line.rstrip('\n').split('\t')
-		if len(line) > 11 and line[1] in subtracted_values:
+		if len(line) > 11 and line[1] in highest_values:
 			#we have a concentration we want to overwrite
-			line[11] = str(subtracted_values[line[1]])
+			line[11] = str(highest_values[line[1]])
 
 		final_list.append(line)
 
