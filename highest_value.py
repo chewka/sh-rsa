@@ -101,19 +101,27 @@ blank_next = create_list(blank_2)
 
 highest_values = {}
 
-def compare(blank_list, blank_next):
-	for key in blank_list.keys():
-		if key in blank_next.keys():
-			if blank_list[key] > blank_next[key]:
-				highest_values[key] = blank_list[key]
-			else:
+# def compare(blank_list, blank_next):
+# 	for key in blank_list.keys():
+# 		if key in blank_next.keys():
+# 			if blank_list[key] > blank_next[key]:
+# 				highest_values[key] = blank_list[key]
+# 			else:
+# 				highest_values[key] = blank_next[key]
+
+# 	print(highest_values)
+
+def compare2(blank_list, blank_next):
+	for item in blank_first:
+		if blank_first[item] > blank_next[item]:
+			highest_values[key] = blank_list[key]
+		else:
 				highest_values[key] = blank_next[key]
 
-	print(highest_values)
 
-compare(blank_list, blank_next)	
+compare2(blank_list, blank_next)	
 
-new_list = compare(blank_list, blank_next)
+new_list = compare2(blank_list, blank_next)
 print(new_list)
 	
 if argv[3]:
