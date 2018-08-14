@@ -110,7 +110,11 @@ def compare(blank_list, blank_next):
 				highest_values[key] = blank_next[key]
 
 	print(highest_values)
-	
+
+compare(blank_list, blank_next)	
+
+new_list = compare(blank_list, blank_next)
+print(new_list)
 	
 if argv[3]:
 	blank_3 = argv[3]
