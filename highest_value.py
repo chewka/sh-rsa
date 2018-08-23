@@ -109,7 +109,7 @@ highest_values = {}
 # 			else:
 # 				highest_values[key] = blank_next[key]
 
-# 	print(highest_values)
+
 
 def compare2(blank_list, blank_next):
 	for item in blank_list:
@@ -120,6 +120,8 @@ def compare2(blank_list, blank_next):
 
 
 compare2(blank_list, blank_next)	
+
+print(highest_values)
 
 new_list = compare2(blank_list, blank_next)
 print(new_list)
