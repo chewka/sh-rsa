@@ -113,6 +113,10 @@ highest_values = {}
 
 def compare2(blank_list, blank_next):
 	for item in blank_list:
+		if blank_list[item] = 'Not Identified':
+			blank_list[item] = 0
+		if blank_next[item] = 'Not Identified':
+			blank_next[item] = 0
 		if blank_list[item] > blank_next[item]:
 			highest_values[item] = blank_list[item]
 		else:
@@ -126,13 +130,15 @@ print(highest_values)
 new_list = compare2(blank_list, blank_next)
 print(new_list)
 	
-# if argv[3]:
-# 	blank_3 = argv[3]
-# 	compare(highest_values, blank_3)
+if argv[3]:
+	blank_3 = argv[3]
+	blank_three = create_list(blank_3)
+	compare2(highest_values, blank_three)
 
-# if argv[4]:
-# 	blank_4 = argv[4]
-# 	compare(highest_values, blank_4)
+if argv[4]:
+	blank_4 = argv[4]
+	blank_four = create_list(blank_4)
+	compare2(highest_values, blank_four)
 
 
 def create_txt_file(highest_values, filename):
