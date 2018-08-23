@@ -112,11 +112,11 @@ highest_values = {}
 # 	print(highest_values)
 
 def compare2(blank_list, blank_next):
-	for item in blank_first:
-		if blank_first[item] > blank_next[item]:
-			highest_values[key] = blank_list[key]
+	for item in blank_list:
+		if blank_list[item] > blank_next[item]:
+			highest_values[item] = blank_list[item]
 		else:
-				highest_values[key] = blank_next[key]
+				highest_values[item] = blank_next[item]
 
 
 compare2(blank_list, blank_next)	
