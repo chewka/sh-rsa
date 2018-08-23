@@ -126,13 +126,13 @@ print(highest_values)
 new_list = compare2(blank_list, blank_next)
 print(new_list)
 	
-if argv[3]:
-	blank_3 = argv[3]
-	compare(highest_values, blank_3)
+# if argv[3]:
+# 	blank_3 = argv[3]
+# 	compare(highest_values, blank_3)
 
-if argv[4]:
-	blank_4 = argv[4]
-	compare(highest_values, blank_4)
+# if argv[4]:
+# 	blank_4 = argv[4]
+# 	compare(highest_values, blank_4)
 
 
 def create_txt_file(highest_values, filename):
