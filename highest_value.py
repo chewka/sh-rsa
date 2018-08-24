@@ -113,10 +113,6 @@ highest_values = {}
 
 def compare2(blank_list, blank_next):
 	for item in blank_list:
-		if blank_list[item] = 'Not Identified':
-			blank_list[item] = 0
-		if blank_next[item] = 'Not Identified':
-			blank_next[item] = 0
 		if blank_list[item] > blank_next[item]:
 			highest_values[item] = blank_list[item]
 		else:
