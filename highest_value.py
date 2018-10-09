@@ -6,7 +6,7 @@ from sys import argv
 # OR other file is simply all values stored
 # IN which the file has the averages of several blanks
 #create new file
-# python highest_val.py BLANK_1.txt BLANK_2.txt BLANK_7.txt BLANK_6.txt > sample-highest.txt
+# python highest_val.py BLANK_1.txt BLANK_2.txt BLANK_3.txt BLANK_4.txt BLANK_5.txt BLANK_6.txt > sample-highest.txt
 
 
 #python3 sh_rsa.py data_file.txt blank_file.txt > test_output2.txt
