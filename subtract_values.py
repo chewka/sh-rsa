@@ -101,6 +101,8 @@ for item in customer_sample:
 	if customer_sample[item] == '' or method_blank[item] == '':
 		continue
 	subtracted_values[item] = float(customer_sample[item]) - float(method_blank[item])
+	if subtracted_values[item] < 0:
+		subtracted_values[item] = 0
 
 #print(subtracted_values)
 
@@ -114,9 +116,6 @@ def create_txt_file(subtracted_values, filename):
 		if len(line) > 11 and line[1] in subtracted_values:
 			#we have a concentration we want to overwrite
 			line[11] = str(subtracted_values[line[1]])
-			if line[11] < 0:
-				line[11] = - line[11]
-			
 
 		final_list.append(line)
 
