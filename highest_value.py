@@ -137,7 +137,17 @@ if argv[4]:
 	blank_4 = argv[4]
 	blank_four = create_list(blank_4)
 	compare2(highest_values, blank_four)
-
+	
+if argv[5]:
+	blank_5 = argv[5]
+	blank_five = create_list(blank_5)
+	compare2(highest_values, blank_five)
+	
+if argv[6]:
+	blank_6 = argv[6]
+	blank_six = create_list(blank_6)
+	compare2(highest_values, blank_six)
+	
 
 def create_txt_file(highest_values, filename):
 	file = open(filename)
