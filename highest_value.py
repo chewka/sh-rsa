@@ -123,10 +123,10 @@ def compare2(blank_list, blank_next):
 
 compare2(blank_list, blank_next)	
 
-print(highest_values)
+#print(highest_values)
 
 new_list = compare2(blank_list, blank_next)
-print(new_list)
+#print(new_list)
 	
 if argv[3]:
 	blank_3 = argv[3]
