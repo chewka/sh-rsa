@@ -114,6 +114,9 @@ def create_txt_file(subtracted_values, filename):
 		if len(line) > 11 and line[1] in subtracted_values:
 			#we have a concentration we want to overwrite
 			line[11] = str(subtracted_values[line[1]])
+			if line[11] < 0:
+				line[11] = - line[11]
+			
 
 		final_list.append(line)
 
